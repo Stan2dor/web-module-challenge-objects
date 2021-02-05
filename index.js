@@ -85,9 +85,7 @@ Using the reviews array above do the following: (no function needed)
 */
 
 reviews.push({
-  name: 'Stan',
-  rating: 5,
-  feedback: 'Great Experience'
+  name: 'Stan', rating: 5, feedback: 'Great Experience'
 });
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -111,11 +109,9 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, index) {
+  return array[index].name + " gave the restaurant a " + array[index].rating + " star review, and their feedback was: " + array[index].feedback
 }
-
-
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -130,8 +126,13 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview() {
-  getReviewByIndex(reviews, 6)
+function getLastReview(array) {
+  let lastIndex = array.length
+  let name = array[lastIndex - 1].name
+  let rating = array[lastIndex - 1].rating
+  let feedback = array[lastIndex - 1].feedback
+  let string = `${name} gave the restaurant a ${rating} star review, and their feedback was: ${feedback}`
+  return string;
 }
 
 
